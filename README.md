@@ -9,3 +9,8 @@ AMQP (Advanced Message Queuing Protocol) is a communication protocol that allows
 ### Simulation Slow Subscriber
 ![Simulation slow subscriber](image/SimulationSlowSubscriber.jpg)
 On my computer, there are up to 2 queues. I ran the publisher twice in quick succession. The sending speed was faster than the receiving speed, causing the messages to be stored in the queue first before being received by the subscriber.
+
+### Multi Simulation Slow Subscriber
+![Multi simulation slow subscriber monitor](image/MultiSimulationSlowSubscriberMonitor.png)
+![Multi simulation slow subscriber console](image/MultiSimulationSlowSubscriberConsole.jpg)
+With the same number of messages from the publisher, having multiple subscribers results in a shorter queue length compared to before, because the messages are evenly consumed by the three subscribers. However, this means that each subscriber does not receive all the messages. The issue here arises when we want all subscribers to receive the same messages.
